@@ -1,0 +1,14 @@
+{
+    "name": "junior/3lm-informatica",
+    "autoload": {
+        "psr-4": {
+            "Junior\\3lmInformatica\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Junior",
+            "email": "jpires.666@gmail.com"
+        }
+    ]
+}
