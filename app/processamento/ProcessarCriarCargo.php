@@ -6,7 +6,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $conn = new mysqli("localhost", "root", "", "cadastro_funcionarios");
 
-    // Verifique a conexão com o banco de dados
     if ($conn->connect_error) {
         die("Erro na conexão com o banco de dados: " . $conn->connect_error);
     }
@@ -20,7 +19,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Erro ao inserir o cargo: " . $conn->error;
     }
 
-    // Feche a conexão com o banco de dados
     $conn->close();
 }
 ?>

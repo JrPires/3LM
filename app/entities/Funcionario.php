@@ -1,4 +1,7 @@
 <?php
+namespace app\entities;
+
+use DateTime;
 
 class Funcionario
 {

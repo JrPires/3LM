@@ -1,7 +1,7 @@
 <?php
 namespace app\controllers;
 
-use FuncionarioModel;
+use app\models\FuncionarioModel;
 use mysqli;
 
 class FuncionarioController
@@ -14,9 +14,9 @@ class FuncionarioController
         $this->funcionarioModel = new FuncionarioModel($conn);
     }
 
-    public function listarFuncionarios() {
-        return $this->funcionarioModel->listarFuncionarios();
-    }
+//    public function listarFuncionarios() {
+//        return $this->funcionarioModel->listarFuncionarios();
+//    }
 
     public function editarFuncionario($id) {
         return $this->funcionarioModel->getFuncionarioPorId($id);

@@ -9,7 +9,7 @@
 <h1>Criar Funcionário</h1>
 <a href="../../listaFuncionarios.php" class="btn btn-secondary">Voltar para a Lista</a>
 
-<form action="../../processamento/ProcessarCriarFuncionario.php" method="POST">
+<form action="../../../../3LM-informatica/app/listaFuncionarios.php" method="POST">
     <div class="form-group">
         <label for="nome">Nome:</label>
         <input type="text" class="form-control" id="nome" name="nome" required>

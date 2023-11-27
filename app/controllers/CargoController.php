@@ -1,4 +1,7 @@
 <?php
+namespace app\controllers;
+
+use app\models\CargoModel;
 
 class CargoController
 {

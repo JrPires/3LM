@@ -1,5 +1,7 @@
 <?php
 
+use app\models\FuncionarioModel;
+
 require_once '../controllers/FuncionarioController.php';
 require_once '../models/FuncionarioModel.php';
 require_once '../entities/Funcionario.php';

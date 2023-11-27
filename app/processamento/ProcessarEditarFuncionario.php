@@ -5,15 +5,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         isset($_POST["id"]) &&
         isset($_POST["nome"]) &&
         isset($_POST["sobrenome"]) &&
-        isset($_POST["cargo"]) &&
-        isset($_POST["data_nascimento"]) &&
+//        isset($_POST["cargo"]) &&
+        isset($_POST["dataNascimento"]) &&
         isset($_POST["salario"])
     ) {
         $id = $_POST["id"];
         $nome = $_POST["nome"];
         $sobrenome = $_POST["sobrenome"];
         $cargo = 1;
-        $dataNascimento = $_POST["data_nascimento"];
+        $dataNascimento = $_POST["dataNascimento"];
         $salario = $_POST["salario"];
 
         $conn = new mysqli("127.0.0.1", "root", "", "cadastro_funcionarios");
@@ -27,10 +27,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             sobrenome = '$sobrenome',
             cargo = '$cargo',
             data_nascimento = '$dataNascimento',
-            salario = $salario
-            WHERE id = $id";
+            salario = '$salario'
+            WHERE id = '$id'";
+
+        var_dump($conn->prepare($sql)); die();
 
         if ($conn->query($sql) === TRUE) {
+            var_dump('asdasdasdasdas'); die();
             header("Location: ../listaFuncionarios.php");
             exit();
         } else {

@@ -1,4 +1,7 @@
 <?php
+
+use app\controllers\CargoController;
+
 require_once 'controllers/CargoController.php';
 require_once 'models/CargoModel.php';
 

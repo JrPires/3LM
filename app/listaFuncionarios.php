@@ -1,6 +1,7 @@
 <?php
 
 use app\controllers\FuncionarioController;
+use app\models\FuncionarioModel;
 
 require_once '../app/models/FuncionarioModel.php';
 require_once '../app/controllers/FuncionarioController.php';
@@ -11,9 +12,9 @@ if ($conn->connect_error) {
     die("Erro na conexão com o banco de dados: " . $conn->connect_error);
 }
 
-$funcionarioController = new FuncionarioController($conn);
+$funcionarioModel = new FuncionarioModel($conn);
 
-$funcionarios = $funcionarioController->listarFuncionarios();
+$funcionarios = $funcionarioModel->listarFuncionarios();
 
 require_once '../app/views/funcionarios/listar.php';
 ?>

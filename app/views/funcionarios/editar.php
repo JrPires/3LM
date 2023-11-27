@@ -7,7 +7,7 @@
 </head>
 <body>
 <h1>Editar Funcionário</h1>
-<a href="../../listaFuncionarios.php" class="btn btn-secondary">Voltar para a Lista</a>
+<a href="../../../../3LM-informatica/app/listaFuncionarios.php" class="btn btn-secondary">Voltar para a Lista</a>
 
 <form action="../../../../3LM-informatica/app/processamento/ProcessarEditarFuncionario.php" method="POST">
     <input type="hidden" name="id" value="<?php echo $funcionario['id']; ?>">
@@ -22,7 +22,8 @@
     </div>
     <div class="form-group">
         <label for="idCargo">Cargo:</label>
-        <select class="form-control" id="idCargo" name="idCargo" >
+        <select class="form-control" id="idCargo" name="idCargo">
+            <option value="1">1</option>
         </select>
     </div>
     <div class="form-group">

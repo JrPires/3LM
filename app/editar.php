@@ -1,6 +1,9 @@
 <?php
+namespace app\views\editar;
 
 use app\controllers\FuncionarioController;
+use app\models\FuncionarioModel;
+use mysqli;
 
 require_once '../app/controllers/FuncionarioController.php';
 require_once '../app/models/FuncionarioModel.php';
@@ -10,9 +13,9 @@ if (isset($_GET['id'])) {
 
     $conn = new mysqli("127.0.0.1", "root", "", "cadastro_funcionarios");
 
-    $funcionarioController = new FuncionarioController($conn);
+    $funcionarioController = new FuncionarioModel($conn);
 
-    $funcionario = $funcionarioController->editarFuncionario($funcionarioId);
+    $funcionario = $funcionarioController->getFuncionarioPorId($funcionarioId);
 
 
     if ($funcionario) {
